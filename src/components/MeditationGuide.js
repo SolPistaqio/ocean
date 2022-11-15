@@ -70,7 +70,7 @@ class MeditationGuide extends Component {
             />
           </>
         )}
-        <audio loop autoPlay ref={this.audioRef}>
+        <audio autoPlay loop ref={this.audioRef}>
           <source src="sound.mp3" type="audio/mpeg"></source>
         </audio>
         <button
