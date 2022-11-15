@@ -1,0 +1,157 @@
+.App {
+  text-align: center;
+  cursor: url("../public/cursor-pointer.svg") 16 16, pointer;
+  font-family: SourceSansPro-Light;
+}
+
+.wrapper,
+.video-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  position: absolute;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(228, 232, 190, 0.5),
+    rgba(53, 31, 15, 0.5)
+  );
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.video-wrapper video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+}
+
+.content {
+  position: fixed;
+  bottom: 30%;
+  color: #f1f1f1;
+  width: 90%;
+  margin: 5%;
+  text-shadow: 2px 2px 6px #6a6565;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(228, 232, 190, 0.5),
+    rgba(53, 31, 15, 0.5)
+  );
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#myBtn {
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  background: rgb(184, 149, 47);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 60px;
+  font-family: SourceSansPro-Black;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+html,
+body,
+#canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.animateText {
+  animation-duration: 0.9s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animateTextOut {
+  animation-duration: 0.9s;
+  animation-name: animate-fade-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes animate-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: "SourceCodePro-VariableFont_wght";
+  src: local("SourceCodePro-VariableFont_wght"),
+    url(../public/SourceCodePro-VariableFont_wght.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: "SourceSansPro-Black";
+  src: local("SourceSansPro-Black"),
+    url(../public/SourceSansPro-Black.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: "SourceSansPro-Light";
+  src: local("SourceSansPro-Light"),
+    url(../public/SourceSansPro-Light.ttf) format("woff2");
+}
+
+@font-face {
+  font-family: "SourceSansPro-Regular";
+  src: local("SourceSansPro-Regular"),
+    url(../public/SourceSansPro-Regular.ttf) format("woff2");
+}
