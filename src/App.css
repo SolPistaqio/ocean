@@ -202,8 +202,10 @@ button {
   transition: fill 0.3s;
 }
 
-button:hover {
-  box-shadow: 2px 2px 6px #e4bfa3c4, -2px -2px 6px #e4bfa3c4;
+@media (hover: hover) {
+  button:hover {
+    box-shadow: 2px 2px 6px #e4bfa3c4, -2px -2px 6px #e4bfa3c4;
+  }
 }
 
 button:active {
