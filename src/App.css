@@ -44,6 +44,15 @@
   text-shadow: 2px 2px 6px #6a6565;
 }
 
+.button-panel {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 h2 {
   font-size: 2.5rem;
 }
@@ -154,4 +163,49 @@ body,
   font-family: "SourceSansPro-Regular";
   src: local("SourceSansPro-Regular"),
     url(../public/SourceSansPro-Regular.ttf) format("woff2");
+}
+
+/**
+    Note that all these styles are just examplatory.
+**/
+
+button {
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+
+  margin: 0.7rem;
+  color: rgba(245, 229, 229, 0.751);
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.svg-icon {
+  position: relative;
+  top: 0.125em;
+  flex-shrink: 0;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  transition: fill 0.3s;
+}
+
+button:hover {
+  box-shadow: 2px 2px 6px #e4bfa3c4, -2px -2px 6px #e4bfa3c4;
+}
+
+button:active {
+  /* box-shadow: 2px 2px 6px inset #6b5a4ec4, -2px -2px 6px inset #6b5a4ec4; */
+  box-shadow: none;
+  /* background: rgba(83, 82, 82, 0.211); */
+  color: rgba(130, 118, 118, 0.751);
+}
+
+.speed-meter {
+  color: rgba(245, 229, 229, 0.751);
+  margin-bottom: -1.5rem;
+  font-size: x-large;
+  font-weight: bolder;
 }

@@ -1,9 +1,6 @@
 import { Component } from "react";
 
 class TextDisplay extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     fadeOut: false,
   };
@@ -11,6 +8,10 @@ class TextDisplay extends Component {
     if (this.props.index !== prevProps.index) {
       await this.fade();
       this.setState({ fadeOut: false });
+    }
+    if (this.props.speed !== prevProps.speed) {
+      clearTimeout(this.timer);
+      this.fade();
     }
   }
 
