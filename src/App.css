@@ -35,6 +35,16 @@
   display: block;
 }
 
+@media (max-width: 767px) {
+  .video-wrapper video {
+    display: none;
+  }
+  .video-wrapper {
+    background-image: url(.././public/ocean.gif);
+    background-size: cover;
+  }
+}
+
 .content {
   position: fixed;
   bottom: 30%;
