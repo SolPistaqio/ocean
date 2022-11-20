@@ -129,7 +129,11 @@ class ControlButtons extends Component {
           <button
             className="button"
             onClick={() => {
-              document.exitFullscreen();
+              if (document.exitFullscreen) {
+                document.exitFullscreen();
+              } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+              }
             }}
           >
             <svg
@@ -149,6 +153,11 @@ class ControlButtons extends Component {
             className="button"
             onClick={() => {
               const body = document.querySelector("body");
+              if (body.requestFullscreen) {
+                body.requestFullscreen();
+              } else if (body.webkitRequestFullscreen) {
+                body.webkitRequestFullscreen();
+              }
               body.requestFullscreen();
             }}
           >
