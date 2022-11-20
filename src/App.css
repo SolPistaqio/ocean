@@ -2,6 +2,7 @@
   text-align: center;
   cursor: url("../public/cursor-pointer.svg") 16 16, pointer;
   font-family: SourceSansPro-Light;
+  overflow: hidden;
 }
 
 .wrapper,
