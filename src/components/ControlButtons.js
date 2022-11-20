@@ -123,6 +123,49 @@ class ControlButtons extends Component {
             </svg>
           </button>
         </div>
+
+        {/* full screen  */}
+        {!document.fullscreenElement ? (
+          <button
+            className="button"
+            onClick={() => {
+              const body = document.querySelector("body");
+              body.requestFullscreen();
+            }}
+          >
+            <svg
+              className="svg-icon"
+              role="img"
+              height="48"
+              width="48"
+              viewBox="0 0 48 48"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M9.65 38.35v-10.2h3.4v6.8h6.8v3.4Zm0-18.5V9.65h10.2v3.4h-6.8v6.8Zm18.5 18.5v-3.4h6.8v-6.8h3.4v10.2Zm6.8-18.5v-6.8h-6.8v-3.4h10.2v10.2Z" />
+            </svg>
+          </button>
+        ) : (
+          <button
+            className="button"
+            onClick={() => {
+              document.exitFullscreen();
+            }}
+          >
+            <svg
+              className="svg-icon"
+              role="img"
+              height="48"
+              width="48"
+              viewBox="0 0 48 48"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M16.65 38v-6.65H10v-3h9.65V38Zm11.7 0v-9.65H38v3h-6.65V38ZM10 19.65v-3h6.65V10h3v9.65Zm18.35 0V10h3v6.65H38v3Z" />
+            </svg>
+          </button>
+        )}
+
         {/* replay */}
         <button
           className="button"
