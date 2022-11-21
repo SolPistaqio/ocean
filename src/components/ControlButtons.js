@@ -125,7 +125,10 @@ class ControlButtons extends Component {
         </div>
 
         {/* full screen  */}
-        {document.fullscreenElement || document.webkitFullscreenElement ? (
+        {/* iphone exception */}
+        {window.navigator.userAgent.match(/iPhone/i) ? (
+          ""
+        ) : document.fullscreenElement || document.webkitFullscreenElement ? (
           <button
             className="button"
             onClick={() => {
